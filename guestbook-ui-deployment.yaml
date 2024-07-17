@@ -34,9 +34,9 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: configmap-volume
-          mountPath: /usr/agent-datadog/config.d/http-check.d/grafana-check.sh
+          mountPath: /usr/agent-datadog/config.d/http-check.d/grafana-check.yaml
           readOnly: true
-          subPath: grafana-check.sh
+          subPath: grafana-check.yaml
       volumes:
       - name: configmap-volume
         configMap:
