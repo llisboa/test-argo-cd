@@ -21,11 +21,11 @@ spec:
         volumeMounts:
         - mountPath: /var/log/config.txt
           subPath: config.txt
-          name: TemplateConfigTxt
+          name: templateconfigtxt
       volumes:
-      - name: TemplateConfigTxt
+      - name: templateconfigtxt
         configMap:
-          name: TemplateConfigTxt
+          name: templateconfigtxt
         data:
           config.txt: |-
             testes
