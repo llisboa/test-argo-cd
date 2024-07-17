@@ -18,18 +18,3 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
-        volumeMounts:
-        - mountPath: /var/log/config.txt
-          subPath: config.txt
-          name: templateconfigtxt
-      volumes:
-      - name: templateconfigtxt
-        configMap:
-          name: templateconfigtxt
-        data:
-          config.txt: |-
-            testes
-            um
-            dois
-            tres
-            testando
