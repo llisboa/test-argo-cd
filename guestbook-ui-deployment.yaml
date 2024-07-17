@@ -20,16 +20,14 @@ spec:
         - containerPort: 80
 
 
----
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: persistent-volumes-argo
-  labels:
-    grafana_dashboard: "1"
-    project: "foo"
+  name: testes-ver
 data:
-  {{-/* Note, indent of only two spaces */}}
   config.txt: |-
-{{ .Files.Get "config.txt" | indent 4 }}
-{{/* .Get, not .Glob; indent 4 spaces, more than 2 above */}}
+    testes
+    um
+    dois
+    tres
+    testando
