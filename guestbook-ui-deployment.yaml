@@ -12,6 +12,7 @@ data:
         method: get
         service: gc-grafana-dev
         min_collection_interval: 900
+        content_match: '\"database\"\: \"ok\"'
 ---
 
 
