@@ -21,7 +21,3 @@ spec:
         volumeMounts:
         - name: config-volume
           mountPath: /var/log
-      volumes:
-      - name: config-volume
-        configMap:
-          name: special-config
