@@ -18,3 +18,12 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+data:
+  config1.txt: |-
+        message = Hello from config 1
+
+  config2.txt: |-
+        message = This is config 2
+
+  config3.txt: |-
+        message = Goodbye from config 3
