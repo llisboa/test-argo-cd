@@ -4,11 +4,11 @@ kind: ConfigMap
 metadata:
   name: my-configmap
 data:
-  teste2.sh: |-
-    #!/bin/bash
-    echo "teste"
-    echo "um"
-    echo "dois"
+  grafana-check.yaml: |-
+    primeira linha
+    segunda linha
+    terceira linha
+    quarta linha
 ---
 
 
@@ -34,9 +34,9 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: configmap-volume
-          mountPath: /bin/teste2.sh
+          mountPath: /usr/agent-datadog/config.d/http-check.d/grafana-check.sh
           readOnly: true
-          subPath: teste2.sh
+          subPath: grafana-check.sh
       volumes:
       - name: configmap-volume
         configMap:
