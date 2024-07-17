@@ -5,10 +5,14 @@ metadata:
   name: file-grafana-check
 data:
   grafana-check.yaml: |-
-    primeira linha
-    segunda linha
-    terceira linha
-    quarta linha
+    init_config:
+    instances:
+      - name: GrafanaCheck
+        url: https://grafanacashalm.dev.gc.container.btgpactual.net/api/health
+        method: get
+        service: gc-grafana-dev
+        min_collection_interval: 900
+        content_match: '\"database\"\: \"ok\"'
 ---
 
 
