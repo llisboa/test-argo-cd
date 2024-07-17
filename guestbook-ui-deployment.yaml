@@ -19,7 +19,7 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - mouthPath: /var/log/config.txt
+        - mountPath: /var/log/config.txt
           subPath: config.txt
           name: TemplateConfigTxt
       volumes:
