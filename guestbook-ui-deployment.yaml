@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: my-configmap
 data:
-  entrypoint.sh: |-
+  teste2.sh: |-
     #!/bin/bash
     echo "teste"
     echo "um"
@@ -34,9 +34,9 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: configmap-volume
-          mountPath: /bin/entrypoint.sh
+          mountPath: /bin/teste2.sh
           readOnly: true
-          subPath: entrypoint.sh
+          subPath: teste2.sh
       volumes:
       - name: configmap-volume
         configMap:
