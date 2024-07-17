@@ -23,7 +23,8 @@ spec:
           subPath: config.txt
           name: TemplateConfigTxt
       volumes:
-      - configMap:
+      - name: TemplateConfigTxt
+        configMap:
           name: TemplateConfigTxt
         data:
           config.txt: |-
